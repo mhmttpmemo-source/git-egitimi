@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Git ve GitHub Eğitimi - Konu 01</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5b667a;
+      --line: #d9e0ec;
+      --brand: #2563eb;
+      --soft: #eff6ff;
+      --code: #111827;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #f5f7fb;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 32px 20px 64px; }
+    header, section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 18px rgb(23 32 51 / 5%);
+    }
+    h1, h2 { line-height: 1.25; }
+    h1 { margin-top: 0; }
+    h2 { border-bottom: 1px solid var(--line); padding-bottom: 10px; }
+    .meta { color: var(--muted); }
+    .goal {
+      border-left: 4px solid var(--brand);
+      background: var(--soft);
+      padding: 12px 16px;
+    }
+    code, pre {
+      font-family: Consolas, "Courier New", monospace;
+    }
+    code { background: #eef2f7; padding: 2px 5px; border-radius: 4px; }
+    pre {
+      overflow-x: auto;
+      color: #e5e7eb;
+      background: var(--code);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    li { margin: 6px 0; }
+    .checklist label { display: block; margin: 10px 0; }
+    textarea {
+      width: 100%;
+      min-height: 130px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      font: inherit;
+      resize: vertical;
+    }
+    .tag {
+      display: inline-block;
+      color: #1e40af;
+      background: #dbeafe;
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-size: .9rem;
+      margin-right: 6px;
+    }
+    footer { color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <span class="tag">Git</span>
+      <span class="tag">Başlangıç</span>
+      <h1>Konu 01: Git ve GitHub'a Giriş</h1>
+      <p class="meta">Tekrar dokümanı | Durum: Başlanmadı | Tarih: ____ / ____ / ______</p>
+      <div class="goal">
+        <strong>Bu konunun hedefi:</strong>
+        Git'in ne işe yaradığını anlamak, bir proje klasörünü Git ile takip etmek
+        ve ilk commit'i oluşturmak.
+      </div>
+    </header>
+
+    <section>
+      <h2>1. Kısa özet</h2>
+      <ul>
+        <li><strong>Git:</strong> Dosya değişikliklerini sürümler hâlinde takip eden dağıtık sürüm kontrol sistemidir.</li>
+        <li><strong>GitHub:</strong> Git depolarını çevrim içi saklamaya ve birlikte geliştirmeye yarayan platformdur.</li>
+        <li><strong>Repository:</strong> Projenin dosyaları ve Git geçmişinin bulunduğu depodur.</li>
+        <li><strong>Commit:</strong> Değişikliklerin açıklamalı bir sürüm kaydıdır.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Komut kartı</h2>
+      <pre><code># Git kurulumunu kontrol et
+git --version
+
+# Yeni proje klasöründe Git'i başlat
+git init
+
+# Değişiklikleri kontrol et
+git status
+
+# Dosyaları commit için hazırla
+git add .
+
+# İlk sürümü kaydet
+git commit -m "İlk commit"
+
+# Commit geçmişini görüntüle
+git log --oneline</code></pre>
+    </section>
+
+    <section>
+      <h2>3. Uygulama görevi</h2>
+      <ol>
+        <li><code>git-egitimi</code> adında bir klasör oluştur.</li>
+        <li>Klasörün içine <code>README.md</code> dosyası ekle.</li>
+        <li>README dosyasına kendini ve öğrenme hedefini yaz.</li>
+        <li>Git deposunu başlat ve ilk commit'i oluştur.</li>
+        <li><code>git status</code> ve <code>git log --oneline</code> çıktısını incele.</li>
+      </ol>
+      <p><strong>Beklenen sonuç:</strong> Çalışma klasöründe en az bir commit bulunmalı ve
+        <code>git status</code> temiz çalışma alanı göstermeli.</p>
+    </section>
+
+    <section>
+      <h2>4. Kendini kontrol et</h2>
+      <div class="checklist">
+        <label><input type="checkbox"> Git ile GitHub arasındaki farkı açıklayabiliyorum.</label>
+        <label><input type="checkbox"> Repository, commit ve çalışma alanı kavramlarını biliyorum.</label>
+        <label><input type="checkbox"> <code>git status</code> çıktısını okuyabiliyorum.</label>
+        <label><input type="checkbox"> Dosya ekleyip ilk commit'imi oluşturabiliyorum.</label>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. Tekrar notlarım</h2>
+      <p>Takıldığım komutlar, öğrendiğim yeni kavramlar ve tekrar etmem gereken noktalar:</p>
+      <textarea aria-label="Tekrar notları"></textarea>
+    </section>
+
+    <footer>Sonraki konu: GitHub repository oluşturma ve projeyi uzak depoya gönderme</footer>
+  </main>
+</body>
+</html>
