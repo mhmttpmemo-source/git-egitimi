@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Git ve GitHub - Konu 02</title>
+  <style>
+    body { max-width: 900px; margin: 32px auto; padding: 0 20px; font: 16px/1.6 Arial, sans-serif; color: #172033; background: #f5f7fb; }
+    header, section { background: white; border: 1px solid #d9e0ec; border-radius: 12px; padding: 22px; margin-bottom: 18px; }
+    h1, h2 { color: #1e3a8a; } h1 { margin-top: 0; }
+    .goal { border-left: 4px solid #2563eb; background: #eff6ff; padding: 12px 16px; }
+    pre { overflow-x: auto; background: #111827; color: #e5e7eb; border-radius: 8px; padding: 16px; }
+    code { font-family: Consolas, monospace; } :not(pre) > code { background: #eef2f7; padding: 2px 5px; border-radius: 4px; }
+    label { display: block; margin: 10px 0; } textarea { width: 100%; min-height: 120px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Konu 02: Repository Yapısı ve .gitignore</h1>
+    <p><strong>Tekrar dokümanı</strong> | Tarih: ____ / ____ / ______</p>
+    <div class="goal"><strong>Hedef:</strong> Repository yapısını anlamak, README dosyasını düzenlemek ve gizli veya gereksiz dosyaları Git'ten korumak.</div>
+  </header>
+
+  <section>
+    <h2>1. Temel kavramlar</h2>
+    <ul>
+      <li><strong>README.md:</strong> Projenin amacını, kurulumunu ve kullanımını açıklar.</li>
+      <li><strong>.gitignore:</strong> Git'in takip etmemesi gereken dosya ve klasörleri belirtir.</li>
+      <li><strong>Public repository:</strong> Herkesin görebildiği depodur.</li>
+      <li><strong>Private repository:</strong> Yalnızca izin verilen kişilerin görebildiği depodur.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. Güvenli .gitignore örneği</h2>
+    <pre><code># Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Gizli bilgiler
+.env
+.env.*
+!.env.example
+
+# Veri ve editör dosyaları
+*.csv
+*.xlsx
+.vscode/</code></pre>
+    <p>Şifre, API anahtarı ve veritabanı parolası gibi bilgileri Public repository'ye gönderme.</p>
+  </section>
+
+  <section>
+    <h2>3. Uygulama komutları</h2>
+    <pre><code>cd $HOME\git-egitimi
+New-Item .gitignore
+notepad .gitignore
+git status
+git add README.md .gitignore
+git commit -m "README ve gitignore dosyalarını güncelle"
+git push
+git status</code></pre>
+    <p><strong>Beklenen sonuç:</strong> Son <code>git status</code> çıktısında yerel dalın <code>origin/main</code> ile güncel ve çalışma alanının temiz olduğu görülmelidir.</p>
+  </section>
+
+  <section>
+    <h2>4. Kontrol listesi</h2>
+    <label><input type="checkbox"> README dosyasının amacını açıklayabiliyorum.</label>
+    <label><input type="checkbox"> .gitignore dosyasının ne işe yaradığını biliyorum.</label>
+    <label><input type="checkbox"> Gizli bilgileri repository'ye göndermemem gerektiğini biliyorum.</label>
+    <label><input type="checkbox"> Commit ve push işlemlerini tamamlayabiliyorum.</label>
+  </section>
+
+  <section>
+    <h2>5. Tekrar notlarım</h2>
+    <textarea placeholder="Takıldığın komutları ve öğrendiğin noktaları buraya yaz..."></textarea>
+  </section>
+</body>
+</html>
