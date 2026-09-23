@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Ortam değişkenleri ve gizli bilgiler
+.env
+.env.*
+!.env.example
+
+# Veri bilimi çıktıları
+.ipynb_checkpoints/
+*.csv
+*.xlsx
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+
+# Editör ayarları
+.vscode/
