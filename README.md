@@ -58,3 +58,7 @@ hazırladığım uygulamaları içerir.
 
 \- \[ ] Yapay zekâ uygulaması
 
+\- \[x] .gitignore ve Repository yapısı
+
+\- \[x] Branch oluşturma
+
