@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Git ve GitHub - Konu 03</title>
+  <style>
+    body { max-width: 900px; margin: 32px auto; padding: 0 20px; font: 16px/1.6 Arial, sans-serif; color: #172033; background: #f5f7fb; }
+    header, section { background: white; border: 1px solid #d9e0ec; border-radius: 12px; padding: 22px; margin-bottom: 18px; }
+    h1, h2 { color: #1e3a8a; } h1 { margin-top: 0; }
+    .goal { border-left: 4px solid #2563eb; background: #eff6ff; padding: 12px 16px; }
+    pre { overflow-x: auto; background: #111827; color: #e5e7eb; border-radius: 8px; padding: 16px; }
+    code { font-family: Consolas, monospace; } :not(pre) > code { background: #eef2f7; padding: 2px 5px; border-radius: 4px; }
+    label { display: block; margin: 10px 0; } textarea { width: 100%; min-height: 120px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Konu 03: Branch ve Merge</h1>
+    <p><strong>Tekrar dokümanı</strong> | Tarih: ____ / ____ / ______</p>
+    <div class="goal"><strong>Hedef:</strong> Yeni branch oluşturmak, değişiklik yapmak, merge etmek ve branch'i silmek.</div>
+  </header>
+
+  <section>
+    <h2>1. Temel kavramlar</h2>
+    <ul>
+      <li><strong>Branch (dal):</strong> Ana projeyi bozmadan ayrı bir çizgide çalışmaya yarayan yapıdır.</li>
+      <li><strong>Feature branch:</strong> Yeni bir özellik eklemek için oluşturulan daldır.</li>
+      <li><strong>Merge:</strong> Bir dalın değişikliklerini başka bir dala birleştirmektir.</li>
+      <li><strong>Fast-forward merge:</strong> Çatışma olmadan birleştirme.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. Branch komutları</h2>
+    <pre><code>git branch
+git switch -c feature/isim
+git switch main
+git merge feature/isim
+git branch -d feature/isim
+git branch -v
+git log --oneline</code></pre>
+    <p><code>git branch</code> dalları listeler, <code>git switch -c</code> yeni dal oluşturur ve ona geçer.</p>
+  </section>
+
+  <section>
+    <h2>3. Uygulama adımları</h2>
+    <ol>
+      <li>Yeni feature dalı oluştur: <code>git switch -c feature/konu-03-pratik</code></li>
+      <li>Dosya düzenle ve <code>git add</code> ile hazırla.</li>
+      <li>Commit oluştur: <code>git commit -m "açıklamacı mesaj"</code></li>
+      <li>Main dalına dön: <code>git switch main</code></li>
+      <li>Merge et: <code>git merge feature/konu-03-pratik</code></li>
+      <li>Branch'i sil: <code>git branch -d feature/konu-03-pratik</code></li>
+      <li>GitHub'a gönder: <code>git push</code></li>
+    </ol>
+    <p><strong>Beklenen sonuç:</strong> <code>git log --oneline</code> tüm commit'leri ve merge işlemini göstermeli.</p>
+  </section>
+
+  <section>
+    <h2>4. Kontrol listesi</h2>
+    <label><input type="checkbox"> Branch nedir ve niçin kullanıldığını açıklayabiliyorum.</label>
+    <label><input type="checkbox"> Yeni branch oluşturup ona geçebiliyorum.</label>
+    <label><input type="checkbox"> Branch'ta değişiklik yapıp commit edebiliyorum.</label>
+    <label><input type="checkbox"> Merge işlemini tamamlayabilirim.</label>
+    <label><input type="checkbox"> Kullanılan branch'i silebiliyorum.</label>
+  </section>
+
+  <section>
+    <h2>5. Tekrar notlarım</h2>
+    <textarea placeholder="Branch yönetimi, merge ve ilgili komutlarla ilgili notlarını buraya yaz..."></textarea>
+  </section>
+</body>
+</html>
